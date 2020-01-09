@@ -43,6 +43,7 @@ class MyApp extends StatelessWidget {
         isCollapsed: true,
         border: InputBorder.none,
       ),
+      appBarTheme: AppBarTheme(elevation: 0),
       /*colorScheme: ColorScheme(
           primary: Colors.white24,
           primaryVariant: Colors.white38,
@@ -60,15 +61,13 @@ class MyApp extends StatelessWidget {
         ),*/
       cupertinoOverrideTheme: _buildCupertinoTheme());
 
-  CupertinoThemeData _buildCupertinoTheme() {
-    return CupertinoThemeData(
-      brightness: Brightness.dark,
-      primaryColor: Colors.white24,
-      primaryContrastingColor: Colors.white,
-      barBackgroundColor: Colors.white24,
-      scaffoldBackgroundColor: Colors.grey[900],
-    );
-  }
+  CupertinoThemeData _buildCupertinoTheme() => CupertinoThemeData(
+        brightness: Brightness.dark,
+        primaryColor: Colors.white24,
+        primaryContrastingColor: Colors.white,
+        barBackgroundColor: Colors.white24,
+        scaffoldBackgroundColor: Colors.grey[900],
+      );
 }
 
 class MyHomePage extends StatefulWidget {
